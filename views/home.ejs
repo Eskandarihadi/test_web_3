@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <span>        
+            
+            <h1 style="font-size: 50px;margin:0;width:250px">this is<br> home page </h1>
+            <p>with we engoyin in the farming moderning an topone or us....</p>
+        
+        </span>
+        <ul>
+            <li>home</li>
+            <li>content</li>
+            <li>content</li>
+            <li id="login"><a style="text-decoration: none;color:#fff" href="/auth/login">login/sign</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="box">
+            <% if(info){ %>
+                <h2 class="text" style="color:green"><%= info %></h2>
+            <% } %>
+            <% if(del){ %>
+                <h2 class="text" style="color:red"><%= del %></h2>
+            <% } %>
+            <% if(update){ %>
+                <h2 class="text" style="color:yellow"><%= update %></h2>
+            <% } %>
+
+            <% if(users.length > 0){ %>
+            <% users.forEach(element => { %>
+            <div class="items">
+        
+                <h1 ><a href="/home/<%= element._id %>" style="text-decoration: none;color:black"><%= element.username %></a></h1>
+                <h2 style="color:gray"><%= element.email %></h2>
+                <form class="dl_btn_pas" action="/home/<%= element._id %>?method=DELETE" method="POST">
+                    <p style="color:rgb(97, 95, 95);border-bottom: 1px solid rgb(97, 95, 95);"><%= element.password %></p>
+                    <input type="submit" class="d_btn" value="delete">
+                </form>
+            </div>
+       <% }); %>
+        <% } %>
+        </div>
+    </div>
+</body>
+<script>
+    const txt = document.querySelectorAll('.text');
+    
+    setTimeout(()=>{
+        for(let i = 0 ; i < txt.length; i++){
+        txt[i].style.display = 'none';
+        }
+    },3000)
+
+</script>
+</html>

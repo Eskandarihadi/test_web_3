@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <h1><%= user.username %></h1>
+    <h2><%= user.email %></h2>
+    <p><%= user.password %></p>
+
+    <form action="/home/<%= user._id %>?method=PUT" method="post"  enctype="multipart/form-data">
+        <label for="">username :</label><br>
+        <input type="text" name="username"><br>
+        <label for="">email :</label><br>
+        <input type="email" name="email"><br>
+        <label for="">password :</label><br>
+        <input type="password" name="password"><br>
+        <input type="submit" style="margin-top: 10px;">
+    </form>
+</body>
+</html>

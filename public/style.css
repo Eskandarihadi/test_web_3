@@ -1,0 +1,97 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+nav{
+    border-bottom: 1px solid gray;
+    height:220px;
+    width:90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    
+
+}
+nav span{
+    width:300px;
+    height:40px;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+nav ul{
+    /* margin-top: 170px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:425px;
+   
+   position: absolute;
+   right:0;
+   bottom: 0%;
+   
+
+}
+nav ul li{
+    
+    list-style-type: none;
+    margin:10px;
+    font-size: 20px;
+}
+#login{
+    background-color: red;
+    color:#fff;
+    border-radius: 5px;
+    height:30px;
+    width:100px;
+    text-align: center;
+    line-height: 25px;
+}
+.container{
+    width:90%;
+    margin: auto;
+}
+.box{
+    width:100%;
+    margin:10px auto;
+
+
+}
+.items{
+    width:100%;
+    height:180px;
+    background-color: lightgray;
+    margin:0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    
+}
+.mx{
+    margin:0
+}
+.dl_btn_pas{
+    display:flex;
+    width:300px;
+    justify-content: space-between;
+
+}
+.d_btn{
+    width:45px;
+    height:25px;
+    color:#fff;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+
+}
+.d_btn:hover{
+    box-shadow: 0px 0px 15px 5px red;
+}
